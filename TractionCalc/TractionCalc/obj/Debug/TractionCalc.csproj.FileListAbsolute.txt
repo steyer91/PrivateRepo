@@ -1,0 +1,14 @@
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\bin\Debug\Data.mdf
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\bin\Debug\Data_log.ldf
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\bin\Debug\TractionCalc.exe.config
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\bin\Debug\TractionCalc.exe
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\bin\Debug\TractionCalc.pdb
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.InputForm.resources
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Intro.resources
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Properties.Resources.resources
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.csproj.GenerateResource.Cache
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.exe
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.pdb
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Calc.resources
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Close.resources
+D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.WarningBox.resources
