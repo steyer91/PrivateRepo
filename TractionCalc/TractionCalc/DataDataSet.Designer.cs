@@ -24,7 +24,7 @@ namespace TractionCalc {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataDataSet : global::System.Data.DataSet {
         
-        private DaneDataTable tableDane;
+        private DaneKlasaDataTable tableDaneKlasa;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace TractionCalc {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Dane"] != null)) {
-                    base.Tables.Add(new DaneDataTable(ds.Tables["Dane"]));
+                if ((ds.Tables["DaneKlasa"] != null)) {
+                    base.Tables.Add(new DaneKlasaDataTable(ds.Tables["DaneKlasa"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TractionCalc {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DaneDataTable Dane {
+        public DaneKlasaDataTable DaneKlasa {
             get {
-                return this.tableDane;
+                return this.tableDaneKlasa;
             }
         }
         
@@ -152,8 +152,8 @@ namespace TractionCalc {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Dane"] != null)) {
-                    base.Tables.Add(new DaneDataTable(ds.Tables["Dane"]));
+                if ((ds.Tables["DaneKlasa"] != null)) {
+                    base.Tables.Add(new DaneKlasaDataTable(ds.Tables["DaneKlasa"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TractionCalc {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDane = ((DaneDataTable)(base.Tables["Dane"]));
+            this.tableDaneKlasa = ((DaneKlasaDataTable)(base.Tables["DaneKlasa"]));
             if ((initTable == true)) {
-                if ((this.tableDane != null)) {
-                    this.tableDane.InitVars();
+                if ((this.tableDaneKlasa != null)) {
+                    this.tableDaneKlasa.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace TractionCalc {
             this.Namespace = "http://tempuri.org/DataDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDane = new DaneDataTable();
-            base.Tables.Add(this.tableDane);
+            this.tableDaneKlasa = new DaneKlasaDataTable();
+            base.Tables.Add(this.tableDaneKlasa);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDane() {
+        private bool ShouldSerializeDaneKlasa() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace TractionCalc {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DaneRowChangeEventHandler(object sender, DaneRowChangeEvent e);
+        public delegate void DaneKlasaRowChangeEventHandler(object sender, DaneKlasaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DaneDataTable : global::System.Data.TypedTableBase<DaneRow> {
+        public partial class DaneKlasaDataTable : global::System.Data.TypedTableBase<DaneKlasaRow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -297,8 +297,8 @@ namespace TractionCalc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneDataTable() {
-                this.TableName = "Dane";
+            public DaneKlasaDataTable() {
+                this.TableName = "DaneKlasa";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +306,7 @@ namespace TractionCalc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DaneDataTable(global::System.Data.DataTable table) {
+            internal DaneKlasaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +323,7 @@ namespace TractionCalc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DaneDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DaneKlasaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -403,34 +403,34 @@ namespace TractionCalc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneRow this[int index] {
+            public DaneKlasaRow this[int index] {
                 get {
-                    return ((DaneRow)(this.Rows[index]));
+                    return ((DaneKlasaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DaneRowChangeEventHandler DaneRowChanging;
+            public event DaneKlasaRowChangeEventHandler DaneKlasaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DaneRowChangeEventHandler DaneRowChanged;
+            public event DaneKlasaRowChangeEventHandler DaneKlasaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DaneRowChangeEventHandler DaneRowDeleting;
+            public event DaneKlasaRowChangeEventHandler DaneKlasaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DaneRowChangeEventHandler DaneRowDeleted;
+            public event DaneKlasaRowChangeEventHandler DaneKlasaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDaneRow(DaneRow row) {
+            public void AddDaneKlasaRow(DaneKlasaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneRow AddDaneRow(string promien_ro, string szerokosc_bo, string wysH, string wys_h, string rd, string bd, string delta_h) {
-                DaneRow rowDaneRow = ((DaneRow)(this.NewRow()));
+            public DaneKlasaRow AddDaneKlasaRow(string promien_ro, string szerokosc_bo, string wysH, string wys_h, string rd, string bd, string delta_h) {
+                DaneKlasaRow rowDaneKlasaRow = ((DaneKlasaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         promien_ro,
@@ -440,22 +440,22 @@ namespace TractionCalc {
                         rd,
                         bd,
                         delta_h};
-                rowDaneRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDaneRow);
-                return rowDaneRow;
+                rowDaneKlasaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDaneKlasaRow);
+                return rowDaneKlasaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneRow FindByID(int ID) {
-                return ((DaneRow)(this.Rows.Find(new object[] {
+            public DaneKlasaRow FindByID(int ID) {
+                return ((DaneKlasaRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DaneDataTable cln = ((DaneDataTable)(base.Clone()));
+                DaneKlasaDataTable cln = ((DaneKlasaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,7 +463,7 @@ namespace TractionCalc {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DaneDataTable();
+                return new DaneKlasaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -517,28 +517,28 @@ namespace TractionCalc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneRow NewDaneRow() {
-                return ((DaneRow)(this.NewRow()));
+            public DaneKlasaRow NewDaneKlasaRow() {
+                return ((DaneKlasaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DaneRow(builder);
+                return new DaneKlasaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DaneRow);
+                return typeof(DaneKlasaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DaneRowChanged != null)) {
-                    this.DaneRowChanged(this, new DaneRowChangeEvent(((DaneRow)(e.Row)), e.Action));
+                if ((this.DaneKlasaRowChanged != null)) {
+                    this.DaneKlasaRowChanged(this, new DaneKlasaRowChangeEvent(((DaneKlasaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -546,8 +546,8 @@ namespace TractionCalc {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DaneRowChanging != null)) {
-                    this.DaneRowChanging(this, new DaneRowChangeEvent(((DaneRow)(e.Row)), e.Action));
+                if ((this.DaneKlasaRowChanging != null)) {
+                    this.DaneKlasaRowChanging(this, new DaneKlasaRowChangeEvent(((DaneKlasaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -555,8 +555,8 @@ namespace TractionCalc {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DaneRowDeleted != null)) {
-                    this.DaneRowDeleted(this, new DaneRowChangeEvent(((DaneRow)(e.Row)), e.Action));
+                if ((this.DaneKlasaRowDeleted != null)) {
+                    this.DaneKlasaRowDeleted(this, new DaneKlasaRowChangeEvent(((DaneKlasaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -564,14 +564,14 @@ namespace TractionCalc {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DaneRowDeleting != null)) {
-                    this.DaneRowDeleting(this, new DaneRowChangeEvent(((DaneRow)(e.Row)), e.Action));
+                if ((this.DaneKlasaRowDeleting != null)) {
+                    this.DaneKlasaRowDeleting(this, new DaneKlasaRowChangeEvent(((DaneKlasaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDaneRow(DaneRow row) {
+            public void RemoveDaneKlasaRow(DaneKlasaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -598,7 +598,7 @@ namespace TractionCalc {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DaneDataTable";
+                attribute2.FixedValue = "DaneKlasaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -642,25 +642,25 @@ namespace TractionCalc {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DaneRow : global::System.Data.DataRow {
+        public partial class DaneKlasaRow : global::System.Data.DataRow {
             
-            private DaneDataTable tableDane;
+            private DaneKlasaDataTable tableDaneKlasa;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DaneRow(global::System.Data.DataRowBuilder rb) : 
+            internal DaneKlasaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDane = ((DaneDataTable)(this.Table));
+                this.tableDaneKlasa = ((DaneKlasaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableDane.IDColumn]));
+                    return ((int)(this[this.tableDaneKlasa.IDColumn]));
                 }
                 set {
-                    this[this.tableDane.IDColumn] = value;
+                    this[this.tableDaneKlasa.IDColumn] = value;
                 }
             }
             
@@ -669,14 +669,14 @@ namespace TractionCalc {
             public string promien_ro {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.promien_roColumn]));
+                        return ((string)(this[this.tableDaneKlasa.promien_roColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'promien_ro\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'promien_ro\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.promien_roColumn] = value;
+                    this[this.tableDaneKlasa.promien_roColumn] = value;
                 }
             }
             
@@ -685,14 +685,14 @@ namespace TractionCalc {
             public string szerokosc_bo {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.szerokosc_boColumn]));
+                        return ((string)(this[this.tableDaneKlasa.szerokosc_boColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'szerokosc_bo\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'szerokosc_bo\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.szerokosc_boColumn] = value;
+                    this[this.tableDaneKlasa.szerokosc_boColumn] = value;
                 }
             }
             
@@ -701,14 +701,14 @@ namespace TractionCalc {
             public string wysH {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.wysHColumn]));
+                        return ((string)(this[this.tableDaneKlasa.wysHColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'wysH\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'wysH\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.wysHColumn] = value;
+                    this[this.tableDaneKlasa.wysHColumn] = value;
                 }
             }
             
@@ -717,14 +717,14 @@ namespace TractionCalc {
             public string wys_h {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.wys_hColumn]));
+                        return ((string)(this[this.tableDaneKlasa.wys_hColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'wys_h\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'wys_h\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.wys_hColumn] = value;
+                    this[this.tableDaneKlasa.wys_hColumn] = value;
                 }
             }
             
@@ -733,14 +733,14 @@ namespace TractionCalc {
             public string rd {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.rdColumn]));
+                        return ((string)(this[this.tableDaneKlasa.rdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'rd\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rd\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.rdColumn] = value;
+                    this[this.tableDaneKlasa.rdColumn] = value;
                 }
             }
             
@@ -749,14 +749,14 @@ namespace TractionCalc {
             public string bd {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.bdColumn]));
+                        return ((string)(this[this.tableDaneKlasa.bdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'bd\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'bd\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.bdColumn] = value;
+                    this[this.tableDaneKlasa.bdColumn] = value;
                 }
             }
             
@@ -765,99 +765,99 @@ namespace TractionCalc {
             public string delta_h {
                 get {
                     try {
-                        return ((string)(this[this.tableDane.delta_hColumn]));
+                        return ((string)(this[this.tableDaneKlasa.delta_hColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'delta_h\' in table \'Dane\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'delta_h\' in table \'DaneKlasa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDane.delta_hColumn] = value;
+                    this[this.tableDaneKlasa.delta_hColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Ispromien_roNull() {
-                return this.IsNull(this.tableDane.promien_roColumn);
+                return this.IsNull(this.tableDaneKlasa.promien_roColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setpromien_roNull() {
-                this[this.tableDane.promien_roColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.promien_roColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isszerokosc_boNull() {
-                return this.IsNull(this.tableDane.szerokosc_boColumn);
+                return this.IsNull(this.tableDaneKlasa.szerokosc_boColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setszerokosc_boNull() {
-                this[this.tableDane.szerokosc_boColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.szerokosc_boColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IswysHNull() {
-                return this.IsNull(this.tableDane.wysHColumn);
+                return this.IsNull(this.tableDaneKlasa.wysHColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetwysHNull() {
-                this[this.tableDane.wysHColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.wysHColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Iswys_hNull() {
-                return this.IsNull(this.tableDane.wys_hColumn);
+                return this.IsNull(this.tableDaneKlasa.wys_hColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setwys_hNull() {
-                this[this.tableDane.wys_hColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.wys_hColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsrdNull() {
-                return this.IsNull(this.tableDane.rdColumn);
+                return this.IsNull(this.tableDaneKlasa.rdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetrdNull() {
-                this[this.tableDane.rdColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.rdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsbdNull() {
-                return this.IsNull(this.tableDane.bdColumn);
+                return this.IsNull(this.tableDaneKlasa.bdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetbdNull() {
-                this[this.tableDane.bdColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.bdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isdelta_hNull() {
-                return this.IsNull(this.tableDane.delta_hColumn);
+                return this.IsNull(this.tableDaneKlasa.delta_hColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setdelta_hNull() {
-                this[this.tableDane.delta_hColumn] = global::System.Convert.DBNull;
+                this[this.tableDaneKlasa.delta_hColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -865,22 +865,22 @@ namespace TractionCalc {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DaneRowChangeEvent : global::System.EventArgs {
+        public class DaneKlasaRowChangeEvent : global::System.EventArgs {
             
-            private DaneRow eventRow;
+            private DaneKlasaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneRowChangeEvent(DaneRow row, global::System.Data.DataRowAction action) {
+            public DaneKlasaRowChangeEvent(DaneKlasaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DaneRow Row {
+            public DaneKlasaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -908,7 +908,7 @@ namespace TractionCalc.DataDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DaneTableAdapter : global::System.ComponentModel.Component {
+    public partial class DaneKlasaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -922,7 +922,7 @@ namespace TractionCalc.DataDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DaneTableAdapter() {
+        public DaneKlasaTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1019,7 +1019,7 @@ namespace TractionCalc.DataDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Dane";
+            tableMapping.DataSetTable = "DaneKlasa";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("promien_ro", "promien_ro");
             tableMapping.ColumnMappings.Add("szerokosc_bo", "szerokosc_bo");
@@ -1031,7 +1031,7 @@ namespace TractionCalc.DataDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Dane] WHERE (([ID] = @Original_ID) AND ((@IsNull_promien_ro = 1 AND [promien_ro] IS NULL) OR ([promien_ro] = @Original_promien_ro)) AND ((@IsNull_szerokosc_bo = 1 AND [szerokosc_bo] IS NULL) OR ([szerokosc_bo] = @Original_szerokosc_bo)) AND ((@IsNull_wysH = 1 AND [wysH] IS NULL) OR ([wysH] = @Original_wysH)) AND ((@IsNull_wys_h = 1 AND [wys_h] IS NULL) OR ([wys_h] = @Original_wys_h)) AND ((@IsNull_rd = 1 AND [rd] IS NULL) OR ([rd] = @Original_rd)) AND ((@IsNull_bd = 1 AND [bd] IS NULL) OR ([bd] = @Original_bd)) AND ((@IsNull_delta_h = 1 AND [delta_h] IS NULL) OR ([delta_h] = @Original_delta_h)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DaneKlasa] WHERE (([ID] = @Original_ID) AND ((@IsNull_promien_ro = 1 AND [promien_ro] IS NULL) OR ([promien_ro] = @Original_promien_ro)) AND ((@IsNull_szerokosc_bo = 1 AND [szerokosc_bo] IS NULL) OR ([szerokosc_bo] = @Original_szerokosc_bo)) AND ((@IsNull_wysH = 1 AND [wysH] IS NULL) OR ([wysH] = @Original_wysH)) AND ((@IsNull_wys_h = 1 AND [wys_h] IS NULL) OR ([wys_h] = @Original_wys_h)) AND ((@IsNull_rd = 1 AND [rd] IS NULL) OR ([rd] = @Original_rd)) AND ((@IsNull_bd = 1 AND [bd] IS NULL) OR ([bd] = @Original_bd)) AND ((@IsNull_delta_h = 1 AND [delta_h] IS NULL) OR ([delta_h] = @Original_delta_h)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_promien_ro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "promien_ro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1050,8 +1050,8 @@ namespace TractionCalc.DataDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_delta_h", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delta_h", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Dane] ([promien_ro], [szerokosc_bo], [wysH], [wys_h], [rd], [bd], [delta_h]) VALUES (@promien_ro, @szerokosc_bo, @wysH, @wys_h, @rd, @bd, @delta_h);
-SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DaneKlasa] ([promien_ro], [szerokosc_bo], [wysH], [wys_h], [rd], [bd], [delta_h]) VALUES (@promien_ro, @szerokosc_bo, @wysH, @wys_h, @rd, @bd, @delta_h);
+SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM DaneKlasa WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@promien_ro", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "promien_ro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@szerokosc_bo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "szerokosc_bo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1062,8 +1062,8 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@delta_h", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "delta_h", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Dane] SET [promien_ro] = @promien_ro, [szerokosc_bo] = @szerokosc_bo, [wysH] = @wysH, [wys_h] = @wys_h, [rd] = @rd, [bd] = @bd, [delta_h] = @delta_h WHERE (([ID] = @Original_ID) AND ((@IsNull_promien_ro = 1 AND [promien_ro] IS NULL) OR ([promien_ro] = @Original_promien_ro)) AND ((@IsNull_szerokosc_bo = 1 AND [szerokosc_bo] IS NULL) OR ([szerokosc_bo] = @Original_szerokosc_bo)) AND ((@IsNull_wysH = 1 AND [wysH] IS NULL) OR ([wysH] = @Original_wysH)) AND ((@IsNull_wys_h = 1 AND [wys_h] IS NULL) OR ([wys_h] = @Original_wys_h)) AND ((@IsNull_rd = 1 AND [rd] IS NULL) OR ([rd] = @Original_rd)) AND ((@IsNull_bd = 1 AND [bd] IS NULL) OR ([bd] = @Original_bd)) AND ((@IsNull_delta_h = 1 AND [delta_h] IS NULL) OR ([delta_h] = @Original_delta_h)));
-SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DaneKlasa] SET [promien_ro] = @promien_ro, [szerokosc_bo] = @szerokosc_bo, [wysH] = @wysH, [wys_h] = @wys_h, [rd] = @rd, [bd] = @bd, [delta_h] = @delta_h WHERE (([ID] = @Original_ID) AND ((@IsNull_promien_ro = 1 AND [promien_ro] IS NULL) OR ([promien_ro] = @Original_promien_ro)) AND ((@IsNull_szerokosc_bo = 1 AND [szerokosc_bo] IS NULL) OR ([szerokosc_bo] = @Original_szerokosc_bo)) AND ((@IsNull_wysH = 1 AND [wysH] IS NULL) OR ([wysH] = @Original_wysH)) AND ((@IsNull_wys_h = 1 AND [wys_h] IS NULL) OR ([wys_h] = @Original_wys_h)) AND ((@IsNull_rd = 1 AND [rd] IS NULL) OR ([rd] = @Original_rd)) AND ((@IsNull_bd = 1 AND [bd] IS NULL) OR ([bd] = @Original_bd)) AND ((@IsNull_delta_h = 1 AND [delta_h] IS NULL) OR ([delta_h] = @Original_delta_h)));
+SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM DaneKlasa WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@promien_ro", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "promien_ro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@szerokosc_bo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "szerokosc_bo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1103,7 +1103,7 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane";
+            this._commandCollection[0].CommandText = "SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM DaneKlasa";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1111,7 +1111,7 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataDataSet.DaneDataTable dataTable) {
+        public virtual int Fill(DataDataSet.DaneKlasaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1124,9 +1124,9 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataDataSet.DaneDataTable GetData() {
+        public virtual DataDataSet.DaneKlasaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataDataSet.DaneDataTable dataTable = new DataDataSet.DaneDataTable();
+            DataDataSet.DaneKlasaDataTable dataTable = new DataDataSet.DaneKlasaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1134,7 +1134,7 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataDataSet.DaneDataTable dataTable) {
+        public virtual int Update(DataDataSet.DaneKlasaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1142,7 +1142,7 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DataDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Dane");
+            return this.Adapter.Update(dataSet, "DaneKlasa");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1459,7 +1459,7 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         
         private UpdateOrderOption _updateOrder;
         
-        private DaneTableAdapter _daneTableAdapter;
+        private DaneKlasaTableAdapter _daneKlasaTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1481,12 +1481,12 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DaneTableAdapter DaneTableAdapter {
+        public DaneKlasaTableAdapter DaneKlasaTableAdapter {
             get {
-                return this._daneTableAdapter;
+                return this._daneKlasaTableAdapter;
             }
             set {
-                this._daneTableAdapter = value;
+                this._daneKlasaTableAdapter = value;
             }
         }
         
@@ -1509,9 +1509,9 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._daneTableAdapter != null) 
-                            && (this._daneTableAdapter.Connection != null))) {
-                    return this._daneTableAdapter.Connection;
+                if (((this._daneKlasaTableAdapter != null) 
+                            && (this._daneKlasaTableAdapter.Connection != null))) {
+                    return this._daneKlasaTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1526,7 +1526,7 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._daneTableAdapter != null)) {
+                if ((this._daneKlasaTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1540,12 +1540,12 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(DataDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._daneTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Dane.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._daneKlasaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DaneKlasa.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._daneTableAdapter.Update(updatedRows));
+                    result = (result + this._daneKlasaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1559,11 +1559,11 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(DataDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._daneTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Dane.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._daneKlasaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DaneKlasa.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._daneTableAdapter.Update(addedRows));
+                    result = (result + this._daneKlasaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1577,11 +1577,11 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._daneTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Dane.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._daneKlasaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DaneKlasa.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._daneTableAdapter.Update(deletedRows));
+                    result = (result + this._daneKlasaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1624,8 +1624,8 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._daneTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._daneTableAdapter.Connection) == false))) {
+            if (((this._daneKlasaTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._daneKlasaTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1661,13 +1661,13 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._daneTableAdapter != null)) {
-                    revertConnections.Add(this._daneTableAdapter, this._daneTableAdapter.Connection);
-                    this._daneTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._daneTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._daneTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._daneTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._daneTableAdapter.Adapter);
+                if ((this._daneKlasaTableAdapter != null)) {
+                    revertConnections.Add(this._daneKlasaTableAdapter, this._daneKlasaTableAdapter.Connection);
+                    this._daneKlasaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._daneKlasaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._daneKlasaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._daneKlasaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._daneKlasaTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1728,9 +1728,9 @@ SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane WHER
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._daneTableAdapter != null)) {
-                    this._daneTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._daneTableAdapter]));
-                    this._daneTableAdapter.Transaction = null;
+                if ((this._daneKlasaTableAdapter != null)) {
+                    this._daneKlasaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._daneKlasaTableAdapter]));
+                    this._daneKlasaTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

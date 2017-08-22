@@ -3,113 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentNHibernate.Mapping;
 
-namespace TractionCalc
+namespace TractionCalc.Models
 {
     public class Dane
     {
-        private int id;
-        private string p_ro;
-        private string s_bo;
-        private string w_H;
-        private string w_h;
-        private string rd;
-        private string bd;
-        private string dh;
-        private string fi;
-        private string spc;
-        private string wspk;
-        private string wykn;
-        private string wsp_odkrz_k;
-        private string bp;
-        private string wd;
-        private string yb;
+        public virtual int ID { get; set; }
+        public virtual string promien_ro { get; set; }
+        public virtual string szerokosc_bo { get; set; }
+        public virtual string wysH { get; set; }
+        public virtual string wys_h { get; set; }
+        public virtual string rd { get; set; }
+        public virtual string bd { get; set; }
+        public virtual string delta_h { get; set; }
+        public virtual string fi { get; set; }
+        public virtual string sp_c { get; set; }
+        public virtual string wsp_K { get; set; }
+        public virtual string wyk_n { get; set; }
+        public virtual string wsp_odkrzt_k { get; set; }
+        public virtual string bp { get; set; }
+        public virtual string Wd { get; set; }
+        public virtual string yb { get; set; }
 
-        public Dane()
-        {
+    }
 
-        }
+    public class DaneMap : ClassMap<Dane>
+    {
+        public DaneMap()
+        {
+            Table("Dane");
 
-        public int ID
-        {
-            get{ return id; }
-            set{ id = value; }
+            Id(x => x.ID).GeneratedBy.Increment().Not.Nullable();
+            Map(x => x.promien_ro).Column("promien_ro").Nullable();
+            Map(x => x.szerokosc_bo).Column("szerokosc_bo").Nullable();
+            Map(x => x.wysH).Column("wysH").Nullable();
+            Map(x => x.wys_h).Column("wys_h").Nullable();
+            Map(x => x.rd).Column("rd").Nullable();
+            Map(x => x.bd).Column("bd").Nullable();
+            Map(x => x.delta_h).Column("delta_h").Nullable();
+            Map(x => x.fi).Column("fi").Nullable();
+            Map(x => x.sp_c).Column("sp_c").Nullable();
+            Map(x => x.wsp_K).Column("wsp_K").Nullable();
+            Map(x => x.wyk_n).Column("wyk_n").Nullable();
+            Map(x => x.wsp_odkrzt_k).Column("wsp_odkrzt_k").Nullable();
+            Map(x => x.bp).Column("bp").Nullable();
+            Map(x => x.Wd).Column("Wd").Nullable();
+            Map(x => x.yb).Column("yb").Nullable();
+          
         }
-        public string promienro
-        {
-            get { return p_ro; }
-            set { p_ro = value; }
-        }
-        public string szerbo
-        {
-            get { return s_bo; }
-            set { s_bo = value; }
-        }
-        public string WysH
-        {
-            get { return w_H; }
-            set { w_H = value; }
-        }
-        public string Wys_h
-        {
-            get { return w_h; }
-            set { w_h = value; }
-        }
-        public string Rd
-        {
-            get { return rd; }
-            set { rd = value; }
-        }
-        public string Bd
-        {
-            get { return bd; }
-            set { bd = value; }
-        }
-        public string Dh
-        {
-            get { return dh; }
-            set { dh = value; }
-        }
-        public string Fi
-        {
-            get { return fi; }
-            set { fi = value; }
-        }
-        public string Spc
-        {
-            get { return spc; }
-            set { spc = value; }
-        }
-        public string WspK
-        {
-            get { return wspk; }
-            set { wspk = value; }
-        }
-        public string Wykn
-        {
-            get { return wykn; }
-            set { wykn = value; }
-        }
-        public string Wsp_odrz_k
-        {
-            get { return wsp_odkrz_k; }
-            set { wsp_odkrz_k = value; }
-        }
-        public string Bp
-        {
-            get { return bp; }
-            set { bp = value; }
-        }
-        public string Wd
-        {
-            get { return wd; }
-            set { wd = value; }
-        }
-        public string y_b
-        {
-            get { return yb; }
-            set { yb = value; }
-        }
-
     }
 }

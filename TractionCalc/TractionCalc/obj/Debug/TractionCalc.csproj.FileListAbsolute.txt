@@ -12,3 +12,47 @@ D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.pdb
 D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Calc.resources
 D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Close.resources
 D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\obj\Debug\TractionCalc.WarningBox.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\TractionCalc.exe.config
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.exe
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.pdb
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\Data.mdf
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\Data_log.ldf
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\TractionCalc.exe
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\TractionCalc.pdb
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.csprojResolveAssemblyReference.cache
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Calc.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Close.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.InputForm.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Intro.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Properties.Resources.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.WarningBox.resources
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\obj\Debug\TractionCalc.csproj.GenerateResource.Cache
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\FluentNHibernate.dll
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\Iesi.Collections.dll
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\NHibernate.dll
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\FluentNHibernate.pdb
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\FluentNHibernate.xml
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\Iesi.Collections.xml
+C:\Users\KasiaiKrystek\Desktop\TractionCalc\TractionCalc\bin\Debug\NHibernate.xml
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\TractionCalc.exe.config
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.exe
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.pdb
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\Data.mdf
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\Data_log.ldf
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\TractionCalc.exe
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\TractionCalc.pdb
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\FluentNHibernate.dll
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\Iesi.Collections.dll
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\NHibernate.dll
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\FluentNHibernate.pdb
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\FluentNHibernate.xml
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\Iesi.Collections.xml
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\bin\Debug\NHibernate.xml
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Calc.resources
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Close.resources
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.InputForm.resources
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Intro.resources
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.Properties.Resources.resources
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.WarningBox.resources
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.csproj.GenerateResource.Cache
+C:\Users\E5410\Desktop\PRACA MAGISTERSKA\TractionCalc_0.2\TractionCalc\TractionCalc\obj\Debug\TractionCalc.csprojResolveAssemblyReference.cache

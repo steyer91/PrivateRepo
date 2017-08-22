@@ -38,12 +38,12 @@ namespace TractionCalc
 
         private void Ok_label_MouseEnter(object sender, EventArgs e)
         {
-            Ok_label.BackColor = SystemColors.ActiveBorder;
+            Ok_label.BackColor = Color.FromArgb(74, 160, 232);
         }
 
         private void Ok_label_MouseLeave(object sender, EventArgs e)
         {
-            Ok_label.BackColor = SystemColors.InactiveCaptionText;
+            Ok_label.BackColor = Color.FromArgb(9, 51, 74);
         }
     }
 }

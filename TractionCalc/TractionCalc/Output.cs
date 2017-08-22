@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TractionCalc
 {
-    class Output
+    public class Output
     {
         public int _lp { get; set; }
         public double _j { get; set; }
@@ -20,5 +20,8 @@ namespace TractionCalc
         public double _yij { get; set; }
         public double _zij { get; set; }
 
+        public double _hpj { get; set; }
+
     }
+   
 }

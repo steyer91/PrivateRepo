@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace TractionCalc
 {
@@ -11,8 +12,9 @@ namespace TractionCalc
     {
         public static SqlConnection Polaczenie()
         {
-            string path = "D:\\Prywatne\\SEMESTR III\\TractionCalc\\TractionCalc\\Data.mdf";
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = " + path + "; Integrated Security = True";
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), @"DataBases\TractionCalc\Data.mdf");
+            //string path = @"D:\Prywatne\SEMESTR III\TractionCalc\TractionCalc\Data.mdf";
+            string con = $"Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = {path}; Integrated Security = True";
 
             SqlConnection pol = new SqlConnection(con);
             return pol;
@@ -21,7 +23,7 @@ namespace TractionCalc
         string rd, string bd, string dh, string fi,  string spc,string wspk,string wykn, string wsp_odkrz_k, string bp,
         string wd, string yb)
         {
-            string zap = "INSERT INTO Dane (promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h, fi, sp_c, wsp_K, wyk_n, wsp_odkrzt_k, bp, Wd, yb)" +
+            string zap = "INSERT INTO DaneKlasa (promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h, fi, sp_c, wsp_K, wyk_n, wsp_odkrzt_k, bp, Wd, yb)" +
                 " VALUES (@p_ro, @s_bo, @w_H, @wys_h, @rd, @bd, @dh, @fi, @spc, @wspk, @wykn, @wspodk, @bp, @wd, @yb) ";
             SqlConnection con = Polaczenie();
             SqlCommand com = new SqlCommand(zap, con);
@@ -41,8 +43,8 @@ namespace TractionCalc
             com.Parameters.AddWithValue("@bp", bp);
             com.Parameters.AddWithValue("@wd", wd);
             com.Parameters.AddWithValue("@yb", yb);
-            //SqlCommand reset1 = new SqlCommand("DBCC CHECKIDENT ('Dane', RESEED, 0)", con);
-            //SqlCommand reset2 = new SqlCommand("DBCC CHECKIDENT ('Dane', RESEED)", con);
+            //SqlCommand reset1 = new SqlCommand("DBCC CHECKIDENT ('DaneKlasa', RESEED, 0)", con);
+            //SqlCommand reset2 = new SqlCommand("DBCC CHECKIDENT ('DaneKlasa', RESEED)", con);
 
             try { con.Open(); com.ExecuteNonQuery(); }// reset2.ExecuteNonQuery(); reset1.ExecuteNonQuery(); }
             catch ( SqlException ex ){ throw ex; }
@@ -53,21 +55,21 @@ namespace TractionCalc
         public static void DeleteData(string test)
         {
             string test1 = test;
-            string zap = "DELETE FROM Dane where ID=" + test1;
+            string zap = "DELETE FROM DaneKlasa where ID=" + test1;
             
             SqlConnection con = Polaczenie();
             SqlCommand com = new SqlCommand(zap, con);
-            //SqlCommand reset1 = new SqlCommand("DBCC CHECKIDENT ('Dane', RESEED, 0)", con);
-            //SqlCommand reset2 = new SqlCommand("DBCC CHECKIDENT ('Dane', RESEED)", con);
+            //SqlCommand reset1 = new SqlCommand("DBCC CHECKIDENT ('DaneKlasa', RESEED, 0)", con);
+            //SqlCommand reset2 = new SqlCommand("DBCC CHECKIDENT ('DaneKlasa', RESEED)", con);
             try { con.Open(); com.ExecuteNonQuery(); }// reset2.ExecuteNonQuery(); reset1.ExecuteNonQuery(); }
             catch (SqlException ex) { throw ex; }
             finally { con.Close(); }
         }
-        public static List<Dane> DataList()
+        public static List<DaneKlasa> DataList()
         {
-            List<Dane> ListaDane = new List<Dane>();
+            List<DaneKlasa> ListaDane = new List<DaneKlasa>();
             SqlConnection con = Polaczenie();
-            string wysw = "SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM Dane";
+            string wysw = "SELECT ID, promien_ro, szerokosc_bo, wysH, wys_h, rd, bd, delta_h FROM DaneKlasa";
           
             SqlCommand com = new SqlCommand(wysw, con);
 
@@ -77,17 +79,17 @@ namespace TractionCalc
 
                 while (read.Read())
                 {
-                    Dane dane = new Dane();
-                    dane.ID = (int)read["ID"];
-                    dane.promienro = read["promien_ro"].ToString();
-                    dane.szerbo = read["szerokosc_bo"].ToString();
-                    dane.WysH = read["wysH"].ToString();
-                    dane.Wys_h = read["wys_h"].ToString();
-                    dane.Rd = read["rd"].ToString();
-                    dane.Bd = read["bd"].ToString();
-                    dane.Dh = read["delta_h"].ToString();
+                    DaneKlasa daneKlasa = new DaneKlasa();
+                    daneKlasa.ID = (int)read["ID"];
+                    daneKlasa.promienro = read["promien_ro"].ToString();
+                    daneKlasa.szerbo = read["szerokosc_bo"].ToString();
+                    daneKlasa.WysH = read["wysH"].ToString();
+                    daneKlasa.Wys_h = read["wys_h"].ToString();
+                    daneKlasa.Rd = read["rd"].ToString();
+                    daneKlasa.Bd = read["bd"].ToString();
+                    daneKlasa.Dh = read["delta_h"].ToString();
 
-                    ListaDane.Add(dane);
+                    ListaDane.Add(daneKlasa);
                 }
                 read.Close();
             }
@@ -97,11 +99,11 @@ namespace TractionCalc
             return ListaDane;
 
         }
-        public static List<Dane> DataList1()
+        public static List<DaneKlasa> DataList1()
         {
-            List<Dane> ListaDane = new List<Dane>();
+            List<DaneKlasa> ListaDane = new List<DaneKlasa>();
             SqlConnection con = Polaczenie();
-            string wysw = "SELECT ID, fi, sp_C, wsp_K, wyk_n, wsp_odkrzt_k, bp, Wd, yb FROM Dane";
+            string wysw = "SELECT ID, fi, sp_C, wsp_K, wyk_n, wsp_odkrzt_k, bp, Wd, yb FROM DaneKlasa";
             
             SqlCommand com = new SqlCommand(wysw, con);
 
@@ -112,19 +114,19 @@ namespace TractionCalc
 
                 while (read.Read())
                 {
-                    Dane dane = new Dane();
-                    dane.ID = (int)read["ID"];
-                    dane.Fi = read["fi"].ToString();
-                    dane.Spc = read["sp_C"].ToString();
-                    dane.WspK = read["wsp_K"].ToString();
-                    dane.Wykn = read["wyk_n"].ToString();
-                    dane.Wsp_odrz_k = read["wsp_odkrzt_k"].ToString();
-                    dane.Bp = read["bp"].ToString();
-                    dane.Wd = read["Wd"].ToString();
-                    dane.y_b = read["yb"].ToString();
+                    DaneKlasa daneKlasa = new DaneKlasa();
+                    daneKlasa.ID = (int)read["ID"];
+                    daneKlasa.Fi = read["fi"].ToString();
+                    daneKlasa.Spc = read["sp_C"].ToString();
+                    daneKlasa.WspK = read["wsp_K"].ToString();
+                    daneKlasa.Wykn = read["wyk_n"].ToString();
+                    daneKlasa.Wsp_odrz_k = read["wsp_odkrzt_k"].ToString();
+                    daneKlasa.Bp = read["bp"].ToString();
+                    daneKlasa.Wd = read["Wd"].ToString();
+                    daneKlasa.y_b = read["yb"].ToString();
                     
 
-                    ListaDane.Add(dane);
+                    ListaDane.Add(daneKlasa);
                 }
                 read.Close();
             }
@@ -134,11 +136,11 @@ namespace TractionCalc
             return ListaDane;
 
         }
-        public static List<Dane> DaneObliczenia1(string index)
+        public static List<DaneKlasa> DaneObliczenia1(string index)
         {
-            List<Dane> ListaDane = new List<Dane>();
+            List<DaneKlasa> ListaDane = new List<DaneKlasa>();
             SqlConnection con = Polaczenie();
-            string wysw = "SELECT * FROM Dane WHERE ID=" + index;
+            string wysw = "SELECT * FROM DaneKlasa WHERE ID=" + index;
 
             SqlCommand com = new SqlCommand(wysw, con);
 
@@ -149,17 +151,17 @@ namespace TractionCalc
 
                 while (read.Read())
                 {
-                    Dane dane = new Dane();
-                    dane.ID = (int)read["ID"];
-                    dane.promienro = read["promien_ro"].ToString();
-                    dane.szerbo = read["szerokosc_bo"].ToString();
-                    dane.WysH = read["wysH"].ToString();
-                    dane.Wys_h = read["wys_h"].ToString();
-                    dane.Rd = read["rd"].ToString();
-                    dane.Bd = read["bd"].ToString();
-                    dane.Dh = read["delta_h"].ToString();
+                    DaneKlasa daneKlasa = new DaneKlasa();
+                    daneKlasa.ID = (int)read["ID"];
+                    daneKlasa.promienro = read["promien_ro"].ToString();
+                    daneKlasa.szerbo = read["szerokosc_bo"].ToString();
+                    daneKlasa.WysH = read["wysH"].ToString();
+                    daneKlasa.Wys_h = read["wys_h"].ToString();
+                    daneKlasa.Rd = read["rd"].ToString();
+                    daneKlasa.Bd = read["bd"].ToString();
+                    daneKlasa.Dh = read["delta_h"].ToString();
 
-                    ListaDane.Add(dane);
+                    ListaDane.Add(daneKlasa);
                 }
                 read.Close();
             }
@@ -170,11 +172,11 @@ namespace TractionCalc
 
         }
     
-        public static List<Dane> DaneObliczenia2(string index)
+        public static List<DaneKlasa> DaneObliczenia2(string index)
         {
-            List<Dane> ListaDane = new List<Dane>();
+            List<DaneKlasa> ListaDane = new List<DaneKlasa>();
             SqlConnection con = Polaczenie();
-            string wysw = "SELECT * FROM Dane WHERE ID=" + index;
+            string wysw = "SELECT * FROM DaneKlasa WHERE ID=" + index;
 
             SqlCommand com = new SqlCommand(wysw, con);
 
@@ -185,18 +187,18 @@ namespace TractionCalc
 
                 while (read.Read())
                 {
-                    Dane dane = new Dane();
-                    dane.ID = (int)read["ID"];
-                    dane.Fi = read["fi"].ToString();
-                    dane.Spc = read["sp_C"].ToString();
-                    dane.WspK = read["wsp_K"].ToString();
-                    dane.Wykn = read["wyk_n"].ToString();
-                    dane.Wsp_odrz_k = read["wsp_odkrzt_k"].ToString();
-                    dane.Bp = read["bp"].ToString();
-                    dane.Wd = read["Wd"].ToString();
-                    dane.y_b = read["yb"].ToString();
+                    DaneKlasa daneKlasa = new DaneKlasa();
+                    daneKlasa.ID = (int)read["ID"];
+                    daneKlasa.Fi = read["fi"].ToString();
+                    daneKlasa.Spc = read["sp_C"].ToString();
+                    daneKlasa.WspK = read["wsp_K"].ToString();
+                    daneKlasa.Wykn = read["wyk_n"].ToString();
+                    daneKlasa.Wsp_odrz_k = read["wsp_odkrzt_k"].ToString();
+                    daneKlasa.Bp = read["bp"].ToString();
+                    daneKlasa.Wd = read["Wd"].ToString();
+                    daneKlasa.y_b = read["yb"].ToString();
 
-                    ListaDane.Add(dane);
+                    ListaDane.Add(daneKlasa);
                 }
                 read.Close();
             }

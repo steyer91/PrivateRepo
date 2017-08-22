@@ -42,7 +42,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(51)))), ((int)(((byte)(74)))));
             this.panel1.Controls.Add(this.Ok_label);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -53,7 +53,7 @@
             // 
             // Ok_label
             // 
-            this.Ok_label.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Ok_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(51)))), ((int)(((byte)(74)))));
             this.Ok_label.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Ok_label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Ok_label.Location = new System.Drawing.Point(185, 131);
